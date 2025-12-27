@@ -7,16 +7,16 @@ The project demonstrates how character frequency and greedy algorithms can be us
 
 ---
 
-## ✨ Features
-- Compresses a text file → `compressed.txt`
-- Decompresses it back → `decompressed.txt`
+## Features
+- Compresses a text file → compressed.txt
+- Decompresses it back → decompressed.txt
 - Uses **frequency table + Huffman Tree**
 - Ensures **lossless compression**
 - Beginner-friendly and interview-safe implementation
 
 ---
 
-## 🧠 Concepts Used
+## Concepts Used
 - Greedy Algorithm  
 - Priority Queue  
 - Binary Tree  
@@ -25,5 +25,5 @@ The project demonstrates how character frequency and greedy algorithms can be us
 
 ---
 
-## 📂 File Structure
+
 
