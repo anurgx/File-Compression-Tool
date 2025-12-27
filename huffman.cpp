@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 struct Node {
     char ch;
     int freq;
@@ -14,13 +13,11 @@ struct Node {
     }
 };
 
-
 struct Compare {
     bool operator()(Node* a, Node* b) {
         return a->freq > b->freq;
     }
 };
-
 
 void generateCodes(Node* root, string code,
                    unordered_map<char, string>& huffmanCode) {
@@ -33,7 +30,6 @@ void generateCodes(Node* root, string code,
     generateCodes(root->left, code + "0", huffmanCode);
     generateCodes(root->right, code + "1", huffmanCode);
 }
-
 
 Node* buildHuffmanTree(const unordered_map<char, int>& freq) {
     priority_queue<Node*, vector<Node*>, Compare> pq;
@@ -56,11 +52,10 @@ Node* buildHuffmanTree(const unordered_map<char, int>& freq) {
     return pq.top();
 }
 
-
 void compress(const string& inputFile, const string& compressedFile) {
     ifstream in(inputFile);
     if (!in) {
-        cout << "Cannot open input file\n";
+        cout << "Cannot open input file" << endl;
         return;
     }
 
@@ -82,9 +77,8 @@ void compress(const string& inputFile, const string& compressedFile) {
     }
     out.close();
 
-    cout << "File compressed successfully.\n";
+    cout << "File compressed successfully." << endl;
 }
-
 
 void decompress(const string& compressedFile,
                 const string& outputFile,
@@ -111,7 +105,7 @@ void decompress(const string& compressedFile,
     in.close();
     out.close();
 
-    cout << "File decompressed successfully.\n";
+    cout << "File decompressed successfully." << endl;
 }
 
 int main() {
@@ -121,7 +115,6 @@ int main() {
 
     compress(inputFile, compressedFile);
 
-    
     ifstream in(inputFile);
     string text((istreambuf_iterator<char>(in)),
                  istreambuf_iterator<char>());
@@ -136,3 +129,5 @@ int main() {
 
     return 0;
 }
+
+
